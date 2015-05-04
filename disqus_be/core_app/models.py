@@ -11,3 +11,4 @@ class Comment(models.Model):
     author_title = models.CharField(max_length = 1000)
     image = models.CharField(max_length = 1000)
     url = models.CharField(max_length = 1000)
+    email = models.CharField(max_length = 1000)
