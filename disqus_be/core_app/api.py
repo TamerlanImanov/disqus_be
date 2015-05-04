@@ -24,8 +24,9 @@ class CommentResource(ModelResource):
     class Meta:
         queryset = Comment.objects.all()
         resource_name = 'comment'
+        limit = 500
         authorization = Authorization()
         filtering = {
             # 'user': ALL_WITH_RELATIONS,
-            'pub_date': ['exact', 'lt', 'lte', 'gte', 'gt'],
+            'url': ['exact', 'lt', 'lte', 'gte', 'gt'],
         }
